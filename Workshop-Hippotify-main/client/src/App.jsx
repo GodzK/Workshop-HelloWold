@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Flex, Box } from "@chakra-ui/react";
-
+import { getUser } from "./services/userService";
 import Navigation from "./components/Navigation";
 import SideBar from "./components/SideBar";
 import MusicPlayer from "./components/MusicPlayer";
@@ -12,7 +12,7 @@ function App() {
   const [user, setUser] = useState();
 
   const fetchUserData = async () => {
-    // insert you code here
+    const response = await getUser()
   };
   useEffect(() => {
     fetchUserData();

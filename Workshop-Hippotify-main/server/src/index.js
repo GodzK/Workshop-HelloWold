@@ -2,7 +2,7 @@ import express from "express";
 import connection from "./config/database.js";
 import playlistRoute from "./routes/playlistRoute.js";
 import userRoute from "./routes/userRoute.js";
-
+import cors from "cors"
 const app = express();
 const port = 3000;
 
